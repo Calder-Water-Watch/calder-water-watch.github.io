@@ -93,7 +93,7 @@
         </div>
 
         <a class="btn btn-primary btn-lg" href="/get-involved.html" role="button">Get involved <i class="fas fa-angle-right ml-2" aria-hidden="true"></i></a>
-        <a class="btn btn-secondary btn-lg ml-2" href="#" role="button">Sign-up <i class="far fa-envelope ml-2" aria-hidden="true"></i></a>
+        <a class="btn btn-secondary btn-lg ml-2" href="#" onclick="openMailchimpPopup()" role="button">Sign-up <i class="far fa-envelope ml-2" aria-hidden="true"></i></a>
 
       </div>
 
@@ -144,6 +144,15 @@
       </div>
 
     </footer>
+
+    <script type="text/javascript" src="//downloads.mailchimp.com/js/signup-forms/popup/unique-methods/embed.js" data-dojo-config="usePlainJson: true, isDebug: false"></script>
+    <script type="text/javascript">
+      window.openMailchimpPopup = function() {
+        window.dojoRequire(["mojo/signup-forms/Loader"], function(L) { L.start({"baseUrl":"mc.us19.list-manage.com","uuid":"a597dba0cbab1ab3813e7403e","lid":"85e6eca246","uniqueMethods":true}) })
+        document.cookie = 'MCPopupClosed=;path=/;expires=Thu, 01 Jan 1970 00:00:00 UTC;';
+        document.cookie = 'MCPopupSubscribed=;path=/;expires=Thu, 01 Jan 1970 00:00:00 UTC;';
+      }
+    </script>
 
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
